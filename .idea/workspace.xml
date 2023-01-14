@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80feab6-a960-433b-8859-f3fcf3dbe6dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/block/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/block/Hash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/Blockchain.java" afterDir="false" />
+    <list default="true" id="a80feab6-a960-433b-8859-f3fcf3dbe6dd" name="Changes" comment="Created project and got hash working.">
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/Derek_Beck.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/BlockFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/data/PersistData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/validation/Validation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/exceptions/InvalidBlockchainException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/user/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/block/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/block/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/block/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/block/Hash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/chain/Blockchain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/Blockchain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,15 +54,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.crypto.exceptions" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.crypto.Main" />
@@ -92,8 +98,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654879446768</updated>
-      <workItem from="1654879450602" duration="5273000" />
+      <workItem from="1654879450602" duration="12850000" />
+      <workItem from="1654970523860" duration="12874000" />
+      <workItem from="1664393697792" duration="55000" />
+      <workItem from="1664393764867" duration="101000" />
+      <workItem from="1664393888386" duration="15000" />
+      <workItem from="1664393926205" duration="1051000" />
+      <workItem from="1673692640033" duration="4029000" />
     </task>
+    <task id="LOCAL-00001" summary="Created project and got hash working.">
+      <created>1654884949348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654884949348</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +129,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created project and got hash working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created project and got hash working." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,18 +1,14 @@
 package org.crypto;
 
-import org.crypto.block.Block;
-
-import java.time.LocalDateTime;
+import org.crypto.chain.BlockFactory;
+import org.crypto.chain.Blockchain;
 
 public class Main {
-    public static void main(String[] args) {
-        Block genesisBlock = new Block(null,null, LocalDateTime.now());
-        System.out.println("Hash for block 1 : " + genesisBlock.getHash());
+    public static Blockchain blockchain = new Blockchain();
+    public static void main(String[] args) throws Exception {
 
-        Block secondBlock = new Block("Yo im the second block", genesisBlock.getHash(), LocalDateTime.now());
-        System.out.println("Hash for block 2 : " + secondBlock.getHash());
-
-        Block thirdBlock = new Block("Hey im the third block", secondBlock.getHash(), LocalDateTime.now());
-        System.out.println("Hash for block 3 : " + thirdBlock.getHash());
+        while (true) {
+            new BlockFactory().createNewBlock(blockchain);
+        }
     }
 }

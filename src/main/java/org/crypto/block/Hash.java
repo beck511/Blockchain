@@ -1,34 +1,26 @@
 package org.crypto.block;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.time.LocalDateTime;
-import java.util.Objects;
+import java.util.Date;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.apache.commons.codec.binary.Hex.encodeHexString;
 
 public class Hash {
-    private final Logger logger = LoggerFactory.getLogger(Hash.class);
 
-    public String calculateHash(String previousHash, LocalDateTime timeStamp, int nonce, String data) {
-        String dataToHash = previousHash
-                + timeStamp
-                + nonce
-                + data;
-        byte[] bytes = null;
+    private static final String algorithm = "SHA-512";
+
+    public static String calculateHash(String previousHash, String data, Date timeStamp, int nonce) {
+        if (previousHash == null)
+        {previousHash = "001-Genesis-Block-001";}
+        String dataToHash = previousHash + data + timeStamp + nonce;
+        byte[] bytes;
         try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-512");
-            bytes = digest.digest(dataToHash.getBytes(UTF_8));
+            MessageDigest digest = MessageDigest.getInstance(algorithm);
+            bytes = digest.digest(dataToHash.getBytes());
         } catch (NoSuchAlgorithmException ex) {
-            logger.error(ex.getMessage());
+            throw new IllegalArgumentException("Invalid hash algorithm: " + algorithm, ex);
         }
-        StringBuilder buffer = new StringBuilder();
-        for (byte b : Objects.requireNonNull(bytes)) {
-            buffer.append(String.format("%02x", b));
-        }
-        return buffer.toString();
+        return encodeHexString(bytes);
     }
 }
