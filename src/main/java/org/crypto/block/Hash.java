@@ -10,7 +10,7 @@ public class Hash {
 
     private static final String algorithm = "SHA-512";
 
-    public static String calculateHash(String previousHash, String data, Date timeStamp, int nonce) {
+    public static String calculateHash(String previousHash, String data, Date timeStamp, long nonce) {
         if (previousHash == null)
         {previousHash = "001-Genesis-Block-001";}
         String dataToHash = previousHash + data + timeStamp + nonce;
