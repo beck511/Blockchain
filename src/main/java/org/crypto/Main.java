@@ -7,6 +7,7 @@ public class Main {
     public static Blockchain blockchain = new Blockchain();
     public static void main(String[] args) throws Exception {
 
+        //noinspection InfiniteLoopStatement
         while (true) {
             new BlockFactory().createNewBlock(blockchain);
         }

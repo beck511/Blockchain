@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80feab6-a960-433b-8859-f3fcf3dbe6dd" name="Changes" comment="Created project and got hash working.">
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/Derek_Beck.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/BlockFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/data/PersistData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/validation/Validation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/exceptions/InvalidBlockchainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/user/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="a80feab6-a960-433b-8859-f3fcf3dbe6dd" name="Changes" comment="Enabled blockchain validation.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/data/GetLastHash.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/block/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/block/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/block/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/block/Hash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/chain/Blockchain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/Blockchain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/chain/BlockFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/BlockFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crypto/chain/data/PersistData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crypto/chain/data/PersistData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +97,16 @@
       <workItem from="1664393764867" duration="101000" />
       <workItem from="1664393888386" duration="15000" />
       <workItem from="1664393926205" duration="1051000" />
-      <workItem from="1673692640033" duration="4029000" />
+      <workItem from="1673692640033" duration="5036000" />
+      <workItem from="1673807780626" duration="161000" />
+      <workItem from="1673808050231" duration="2268000" />
+      <workItem from="1673876198969" duration="30000" />
+      <workItem from="1673876242694" duration="353000" />
+      <workItem from="1673990703978" duration="785000" />
+      <workItem from="1674046217665" duration="555000" />
+      <workItem from="1674047568010" duration="18000" />
+      <workItem from="1674314770124" duration="98000" />
+      <workItem from="1674314883598" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="Created project and got hash working.">
       <created>1654884949348</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654884949348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactored application. Now the blockchain functions as expected.">
+      <created>1673696901645</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673696901645</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +141,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created project and got hash working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created project and got hash working." />
+    <MESSAGE value="Refactored application. Now the blockchain functions as expected." />
+    <MESSAGE value="Enabled blockchain validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enabled blockchain validation." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/org/crypto/block/Block.java</url>
+          <line>10</line>
+          <properties field="nonce" class="org.crypto.block.Block" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

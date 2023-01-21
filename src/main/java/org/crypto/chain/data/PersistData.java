@@ -1,6 +1,7 @@
 package org.crypto.chain.data;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class PersistData {
     private final String fileName = "blockchain.data";
@@ -10,18 +11,18 @@ public class PersistData {
 
     public void save(String data) throws IOException {
         FileOutputStream fos = new FileOutputStream(fileName, true);
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(data);
-        oos.close();
+        OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
+        osw.write(data);
+        osw.close();
     }
 
-    public String load() throws IOException, ClassNotFoundException {
-        String data = null;
+    public String load() throws IOException {
+        String data;
         try (FileInputStream fis = new FileInputStream(fileName);
-             ObjectInputStream ois = new ObjectInputStream(fis)) {
-            data = (String) ois.readObject();
+             InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8)) {
+            BufferedReader br = new BufferedReader(isr);
+            data = br.readLine();
         }
         return data;
     }
-
 }

@@ -1,13 +1,14 @@
 package org.crypto.block;
 
 import java.util.Date;
+import java.util.Random;
 
 public class Block {
     private final String hash;
     private final String data;
     private final Date timeStamp;
     private final String previousHash;
-    private final int nonce = 8;
+    private final long nonce = new Random().nextLong();
 
     public Block(String data, String previousHash, Date timeStamp) {
         this.data = data;
@@ -24,7 +25,7 @@ public class Block {
         return timeStamp;
     }
 
-    public int getNonce() {
+    public long getNonce() {
         return nonce;
     }
 

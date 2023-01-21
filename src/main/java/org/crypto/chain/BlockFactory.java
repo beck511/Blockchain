@@ -6,14 +6,12 @@ import org.crypto.block.Block;
 import org.crypto.chain.data.PersistData;
 import org.crypto.user.Input;
 
-import java.io.IOException;
 import java.util.Date;
-
 public class BlockFactory {
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
     PersistData persistData;
 
-    public BlockFactory() throws IOException {
+    public BlockFactory() {
         this.persistData = new PersistData();
     }
 
@@ -26,5 +24,6 @@ public class BlockFactory {
         String dataToPersist = gson.toJson(blockchain);
         persistData.save(dataToPersist);
         System.out.println("Persisting data: " + dataToPersist);
+        //TODO - validate();
     }
 }
