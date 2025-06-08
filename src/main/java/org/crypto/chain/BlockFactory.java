@@ -17,7 +17,11 @@ public class BlockFactory {
 
     public void createNewBlock(Blockchain blockchain) throws Exception {
         if (Input.getUserInput("Would you like to add some data?").equals("y")) {
-            blockchain.add(new Block(Input.getUserInput("Please add some data for the block"), null, new Date()));
+            String previousHash = null;
+            if (blockchain.getBlockchainSize() > 0) {
+                previousHash = blockchain.getBlock(blockchain.getBlockchainSize() - 1).getHash();
+            }
+            blockchain.add(new Block(Input.getUserInput("Please add some data for the block"), previousHash, new Date()));
         } else {
             return;
         }
