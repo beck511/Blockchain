@@ -10,10 +10,10 @@ public class Hash {
 
     private static final String algorithm = "SHA-512";
 
-    public static String calculateHash(String previousHash, String data, Date timeStamp, long nonce) {
+    public static String calculateHash(String previousHash, String data, Date timestamp, long nonce) {
         if (previousHash == null)
         {previousHash = "001-Genesis-Block-001";}
-        String dataToHash = previousHash + data + timeStamp + nonce;
+        String dataToHash = previousHash + data + timestamp + nonce;
         byte[] bytes;
         try {
             MessageDigest digest = MessageDigest.getInstance(algorithm);

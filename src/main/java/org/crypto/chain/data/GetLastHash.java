@@ -10,7 +10,7 @@ import java.io.IOException;
 public class GetLastHash {
     public static void main(String[] args) throws IOException {
         Gson gson = new Gson();
-        FileReader reader = new FileReader("blockchain.json");
+        FileReader reader = new FileReader("blockchain.data");
         Blockchain blockchain = gson.fromJson(reader, Blockchain.class);
         reader.close();
         String lastHash = blockchain.blockchain[blockchain.blockchain.length-1].hash;
@@ -27,6 +27,6 @@ class Blockchain {
 class Block {
     String hash;
     String data;
-    String timeStamp;
+    String timestamp;
     int nonce;
 }
