@@ -13,8 +13,8 @@ public class Validation {
             Block currentBlock = blockchain.getBlock(i);
             Block previousBlock = blockchain.getBlock(i - 1);
             //compare registered hash and calculated hash:
-            if (!currentBlock.getHash().equals(Hash.calculateHash(previousBlock.getHash(), currentBlock.getData(), currentBlock.getTimeStamp(), currentBlock.getNonce()))) {
-                System.out.println("Hashes not equal");
+            if (!currentBlock.getHash().equals(Hash.calculateHash(previousBlock.getHash(), currentBlock.getData(), currentBlock.getTimestamp(), currentBlock.getNonce()))) {
+                System.out.println("Block hashes do not match");
                 return false;
             }
         }
